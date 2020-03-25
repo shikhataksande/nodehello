@@ -3,7 +3,7 @@
 
 default: dev
 
-all: setup dev deploy
+all: setup dev
 
 cleanDeps:
 	rm -rf node_modules
@@ -13,7 +13,7 @@ setup: cleanDeps
 	npm install
 
 dev:
-	npm run dev
+	npm start
 
 #deploy:
 	#aws s3 cp build/app.zip s3://$(BUCKET)/lambda/api.zip --acl public-read --region ap-southeast-2

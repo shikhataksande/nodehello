@@ -11,18 +11,12 @@ pipeline {
   stages {
 		stage('setup'){
       steps {
-        bash '''
-          #!/bin/bash
-          npm install
-        '''
+        sh 'npm install'
       }
     }
     stage('test') {
 			steps {
-				 bash '''
-          #!/bin/bash
-          npm start
-        '''
+				sh 'npm start'
 			}
 		}
   }
